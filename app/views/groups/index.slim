@@ -1,0 +1,17 @@
+h1 = t('groups')
+
+table.table.table-striped
+  thead
+    tr
+      th Id
+      th Name
+      th Description
+      th colspan="2"
+  tbody
+    - @groups.each do |g|
+      tr
+        td = g.id
+        td = g.name
+        td = g.description
+        td = link_to 'Edit', edit_group_path(g) 
+        td = link_to 'Destroy', g, method: :delete, data: { confirm: 'Are you sure?' } 
