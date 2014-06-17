@@ -8,4 +8,6 @@ html lang="en"
 	= csrf_meta_tags
   body
     = nav_bar :brand => "Rails demo"
-    = yield
+    .container
+      div.row
+        = yield
