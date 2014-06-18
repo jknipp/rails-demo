@@ -6,6 +6,7 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       format.json { render :json => @groups }
+      format.xml { render :xml => @groups}
       format.html {}
     end
   end

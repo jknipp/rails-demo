@@ -11,11 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140617022822) do
+ActiveRecord::Schema.define(version: 20140618004728) do
 
   create_table "groups", force: true do |t|
     t.string   "name"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.binary   "active",      limit: 1
+  end
+
+  create_table "members", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.integer  "group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
