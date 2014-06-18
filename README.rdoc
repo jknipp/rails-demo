@@ -1,4 +1,0 @@
-
-
-http://guides.rubyonrails.org/
-https://github.com/jknipp/rails-demo

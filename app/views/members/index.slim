@@ -1,0 +1,17 @@
+h1 = t('members')
+= link_to 'Add Member', new_member_url
+table.table.table-striped
+  thead
+    tr
+      th Id
+      th First Name
+      th Last Name
+      th colspan="2"
+  tbody
+    - @members.each do |g|
+      tr
+        td = g.id
+        td = g.first_name
+        td = g.last_name
+        td = link_to 'Edit', edit_member_path(g) 
+        td = link_to 'Destroy', g, method: :delete, data: { confirm: 'Are you sure?' } 
